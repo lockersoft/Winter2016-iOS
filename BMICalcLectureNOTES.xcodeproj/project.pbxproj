@@ -84,6 +84,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1B0A628E1C7622AE00DE7588 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		1B0A62911C7622AE00DE7588 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		1B0A62921C7624F200DE7588 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		1B0A62931C7624F200DE7588 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		1B0A62941C76268F00DE7588 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		1B0A62951C76268F00DE7588 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		1B0B604E1C5FB67300C522BD /* davedroid.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = davedroid.gif; path = ../../../../davedroid.gif; sourceTree = "<group>"; };
 		1B27A8D81C61019100C120B7 /* Balanced_scale_of_Justice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Balanced_scale_of_Justice.png; path = Assets.xcassets/Balanced_scale_of_Justice.png; sourceTree = "<group>"; };
 		1B27A8DA1C61065C00C120B7 /* WeightLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightLogViewController.swift; sourceTree = "<group>"; };
@@ -415,6 +421,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				1BD177F81C57CC0D001311F2 /* Base */,
+				1B0A628E1C7622AE00DE7588 /* es */,
+				1B0A62921C7624F200DE7588 /* ja */,
+				1B0A62941C76268F00DE7588 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -423,6 +432,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				1BD177FD1C57CC0D001311F2 /* Base */,
+				1B0A62911C7622AE00DE7588 /* es */,
+				1B0A62931C7624F200DE7588 /* ja */,
+				1B0A62951C76268F00DE7588 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

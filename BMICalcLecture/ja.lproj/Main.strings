@@ -1,0 +1,65 @@
+
+/* Class = "UILabel"; text = "Weight"; ObjectID = "9IM-KC-3Pz"; */
+"9IM-KC-3Pz.text" = "Weight";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Gwf-HO-cHa"; */
+"Gwf-HO-cHa.text" = "Label";
+
+/* Class = "UILabel"; text = "0.0"; ObjectID = "HyD-yH-K83"; */
+"HyD-yH-K83.text" = "0.0";
+
+/* Class = "UISegmentedControl"; Phi-7g-OFS.segmentTitles[0] = "World"; ObjectID = "Phi-7g-OFS"; */
+"Phi-7g-OFS.segmentTitles[0]" = "世界";
+
+/* Class = "UISegmentedControl"; Phi-7g-OFS.segmentTitles[1] = "America"; ObjectID = "Phi-7g-OFS"; 
+    This is a segmented control to switch between weight styles
+ */
+"Phi-7g-OFS.segmentTitles[1]" = "アメリカ";
+
+/* Class = "UIButton"; normalTitle = "Save Weight Entry"; ObjectID = "Rxb-9B-Nrt"; */
+"Rxb-9B-Nrt.normalTitle" = "Save Weight Entry";
+
+/* Class = "UIButton"; normalTitle = "Log This Data"; ObjectID = "TKr-dG-Bo5"; */
+"TKr-dG-Bo5.normalTitle" = "Log This Data";
+
+/* Class = "UIButton"; normalTitle = "View Chart"; ObjectID = "Vpk-ry-UMl"; */
+"Vpk-ry-UMl.normalTitle" = "View Chart";
+
+/* Class = "UILabel"; text = "BMI Calculator"; ObjectID = "avi-Sw-7YB"; */
+"avi-Sw-7YB.text" = "BMI Calculator";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ddV-fe-kGf"; */
+"ddV-fe-kGf.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Back to Log"; ObjectID = "gow-bx-szY"; */
+"gow-bx-szY.normalTitle" = "Back to Log";
+
+/* Class = "UIButton"; normalTitle = "Clear Log File"; ObjectID = "kGU-u0-hhW"; */
+"kGU-u0-hhW.normalTitle" = "Clear Log File";
+
+/* Class = "UILabel"; text = "BMI Weight Log"; ObjectID = "lSp-Jx-bSQ"; */
+"lSp-Jx-bSQ.text" = "BMI Weight Log";
+
+/* Class = "UILabel"; text = "BMI"; ObjectID = "loR-4u-CsO"; */
+"loR-4u-CsO.text" = "BMI";
+
+/* Class = "UIButton"; normalTitle = "BMI Calculator"; ObjectID = "ns4-jK-Us4"; */
+"ns4-jK-Us4.normalTitle" = "BMI Calculator";
+
+/* Class = "UIButton"; normalTitle = "Calculate"; ObjectID = "rFF-YH-m8u"; */
+"rFF-YH-m8u.normalTitle" = "Calculate";
+
+/* Class = "UILabel"; text = "BMI Status"; ObjectID = "s1J-f3-Ogm"; */
+"s1J-f3-Ogm.text" = "BMI Status";
+
+/* Class = "UILabel"; text = "Weight"; ObjectID = "uhN-Ug-cMx"; */
+"uhN-Ug-cMx.text" = "Weight";
+
+/* Class = "UILabel"; text = "Time"; ObjectID = "wIO-a3-PaS"; */
+"wIO-a3-PaS.text" = "Time";
+
+/* Class = "UILabel"; text = "Height"; ObjectID = "xKN-Rn-P2p"; */
+"xKN-Rn-P2p.text" = "Height";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "yUA-Hd-PdV"; */
+"yUA-Hd-PdV.text" = "Date";

@@ -11,6 +11,7 @@
 		1B27A8D91C61019100C120B7 /* Balanced_scale_of_Justice.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B27A8D81C61019100C120B7 /* Balanced_scale_of_Justice.png */; };
 		1B27A8DB1C61065C00C120B7 /* WeightLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B27A8DA1C61065C00C120B7 /* WeightLogViewController.swift */; };
 		1B90E5051C5FF2E8004A38DE /* scale.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B90E5041C5FF2E8004A38DE /* scale.png */; };
+		1BB5168B1C80B4BB00ABF692 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB5168A1C80B4BB00ABF692 /* AlarmViewController.swift */; };
 		1BD177F41C57CC0D001311F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD177F31C57CC0D001311F2 /* AppDelegate.swift */; };
 		1BD177F61C57CC0D001311F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD177F51C57CC0D001311F2 /* ViewController.swift */; };
 		1BD177F91C57CC0D001311F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BD177F71C57CC0D001311F2 /* Main.storyboard */; };
@@ -94,6 +95,7 @@
 		1B27A8D81C61019100C120B7 /* Balanced_scale_of_Justice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Balanced_scale_of_Justice.png; path = Assets.xcassets/Balanced_scale_of_Justice.png; sourceTree = "<group>"; };
 		1B27A8DA1C61065C00C120B7 /* WeightLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightLogViewController.swift; sourceTree = "<group>"; };
 		1B90E5041C5FF2E8004A38DE /* scale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scale.png; path = Assets.xcassets/scale.imageset/scale.png; sourceTree = "<group>"; };
+		1BB5168A1C80B4BB00ABF692 /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		1BD177F01C57CC0D001311F2 /* BMICalcLectureNOTES.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMICalcLectureNOTES.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BD177F31C57CC0D001311F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BD177F51C57CC0D001311F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		1BD177F21C57CC0D001311F2 /* BMICalcLecture */ = {
 			isa = PBXGroup;
 			children = (
+				1BB5168A1C80B4BB00ABF692 /* AlarmViewController.swift */,
 				1BF1C0DD1C74CCA8002EDF35 /* ChartViewController.swift */,
 				1BD177F31C57CC0D001311F2 /* AppDelegate.swift */,
 				1BDB169B1C625A89002D1C22 /* FileUtils.swift */,
@@ -374,6 +377,7 @@
 			files = (
 				1BD177F61C57CC0D001311F2 /* ViewController.swift in Sources */,
 				1B27A8DB1C61065C00C120B7 /* WeightLogViewController.swift in Sources */,
+				1BB5168B1C80B4BB00ABF692 /* AlarmViewController.swift in Sources */,
 				1BD177F41C57CC0D001311F2 /* AppDelegate.swift in Sources */,
 				1BDB169C1C625A89002D1C22 /* FileUtils.swift in Sources */,
 				1BF1C0DE1C74CCA8002EDF35 /* ChartViewController.swift in Sources */,

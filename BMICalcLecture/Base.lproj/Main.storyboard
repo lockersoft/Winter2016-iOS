@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -20,6 +21,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ub8-V9-Bxc"/>
                         <segue destination="gJO-0C-LPE" kind="relationship" relationship="viewControllers" id="F60-Hr-onV"/>
                         <segue destination="xEp-QY-qdI" kind="relationship" relationship="viewControllers" id="fMg-Pp-FNF"/>
+                        <segue destination="1q3-Zn-qza" kind="relationship" relationship="viewControllers" id="csm-rG-7e6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jto-B6-enP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -35,10 +37,10 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GIv-Li-N5M">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GIv-Li-N5M">
                                 <rect key="frame" x="252" y="100" width="97" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -50,7 +52,7 @@
                                     <action selector="heightDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="R71-gd-JaC"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKN-Rn-P2p">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKN-Rn-P2p">
                                 <rect key="frame" x="185" y="104" width="51" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="51" id="W5n-gI-BEX"/>
@@ -72,7 +74,7 @@
                                     <rect key="frame" x="285" y="112" width="51" height="21"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="moH-w0-ZZS">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="moH-w0-ZZS">
                                 <rect key="frame" x="252" y="174" width="97" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -84,7 +86,7 @@
                                     <action selector="weightDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="5Kh-84-c2B"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhN-Ug-cMx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhN-Ug-cMx">
                                 <rect key="frame" x="182" y="178" width="54" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -93,7 +95,7 @@
                                     <rect key="frame" x="282" y="186" width="54" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyD-yH-K83">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyD-yH-K83">
                                 <rect key="frame" x="252" y="310" width="97" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="qIP-uz-Q6o"/>
@@ -115,7 +117,7 @@
                                     <rect key="frame" x="352" y="318" width="97" height="21"/>
                                 </variation>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Phi-7g-OFS">
+                            <segmentedControl opaque="NO" contentMode="center" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Phi-7g-OFS">
                                 <rect key="frame" x="189" y="235" width="223" height="29"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -142,7 +144,7 @@
                                     <action selector="changeLocation:" destination="BYZ-38-t0r" eventType="valueChanged" id="plr-x3-9H0"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFF-YH-m8u">
+                            <button opaque="NO" contentMode="center" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFF-YH-m8u">
                                 <rect key="frame" x="268" y="364" width="64" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -167,7 +169,7 @@
                                     <action selector="calculateBMI" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Ah-xd-zOi"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BMI Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avi-Sw-7YB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="BMI Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avi-Sw-7YB">
                                 <rect key="frame" x="64" y="28" width="473" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="y9R-Yy-AEs"/>
@@ -275,37 +277,37 @@
                                 <exclude reference="s1J-f3-Ogm"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="ZGz-SX-aXC"/>
+                                <exclude reference="cpa-aZ-zsC"/>
+                                <exclude reference="2bj-6S-a7a"/>
+                                <exclude reference="8cH-xA-I7w"/>
+                                <exclude reference="atq-UY-cM5"/>
+                                <exclude reference="xS7-ay-9eP"/>
+                                <exclude reference="Vle-eQ-S2C"/>
+                                <exclude reference="Zk2-GB-Sz9"/>
+                                <exclude reference="hr1-xC-bHl"/>
+                                <exclude reference="yAA-3A-LH5"/>
                                 <exclude reference="0GH-6X-6Vl"/>
                                 <exclude reference="2H7-2F-3hz"/>
                                 <exclude reference="dAD-dd-cCL"/>
                                 <exclude reference="Ne1-ny-hu7"/>
+                                <exclude reference="4Oi-Mn-j79"/>
+                                <exclude reference="Mxw-5h-wcz"/>
                                 <exclude reference="Rbs-Xu-NBt"/>
                                 <exclude reference="Uaf-Tb-s4i"/>
                                 <exclude reference="bD5-rT-4Op"/>
                                 <exclude reference="eI1-pg-xnw"/>
                                 <exclude reference="hCc-nG-OVS"/>
-                                <exclude reference="4Oi-Mn-j79"/>
-                                <exclude reference="Mxw-5h-wcz"/>
+                                <exclude reference="VTH-4s-b6Y"/>
+                                <exclude reference="YQS-FC-waa"/>
                                 <exclude reference="Fcz-fN-MWv"/>
                                 <exclude reference="Rxb-Z3-KqP"/>
                                 <exclude reference="hDB-DY-fzX"/>
-                                <exclude reference="VTH-4s-b6Y"/>
-                                <exclude reference="YQS-FC-waa"/>
                                 <exclude reference="31X-Hq-3J8"/>
                                 <exclude reference="4VR-Ot-iBu"/>
                                 <exclude reference="erS-6A-wOu"/>
                                 <exclude reference="2Dn-6G-Itm"/>
                                 <exclude reference="k7r-b7-RWM"/>
-                                <exclude reference="2bj-6S-a7a"/>
-                                <exclude reference="8cH-xA-I7w"/>
-                                <exclude reference="atq-UY-cM5"/>
-                                <exclude reference="xS7-ay-9eP"/>
-                                <exclude reference="ZGz-SX-aXC"/>
-                                <exclude reference="cpa-aZ-zsC"/>
-                                <exclude reference="Vle-eQ-S2C"/>
-                                <exclude reference="Zk2-GB-Sz9"/>
-                                <exclude reference="hr1-xC-bHl"/>
-                                <exclude reference="yAA-3A-LH5"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -315,37 +317,37 @@
                                 <include reference="s1J-f3-Ogm"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="ZGz-SX-aXC"/>
+                                <include reference="cpa-aZ-zsC"/>
+                                <include reference="2bj-6S-a7a"/>
+                                <include reference="8cH-xA-I7w"/>
+                                <include reference="atq-UY-cM5"/>
+                                <include reference="xS7-ay-9eP"/>
+                                <include reference="Vle-eQ-S2C"/>
+                                <include reference="Zk2-GB-Sz9"/>
+                                <include reference="hr1-xC-bHl"/>
+                                <include reference="yAA-3A-LH5"/>
                                 <include reference="0GH-6X-6Vl"/>
                                 <include reference="2H7-2F-3hz"/>
                                 <include reference="dAD-dd-cCL"/>
                                 <include reference="Ne1-ny-hu7"/>
+                                <include reference="4Oi-Mn-j79"/>
+                                <include reference="Mxw-5h-wcz"/>
                                 <include reference="Rbs-Xu-NBt"/>
                                 <include reference="Uaf-Tb-s4i"/>
                                 <include reference="bD5-rT-4Op"/>
                                 <include reference="eI1-pg-xnw"/>
                                 <include reference="hCc-nG-OVS"/>
-                                <include reference="4Oi-Mn-j79"/>
-                                <include reference="Mxw-5h-wcz"/>
+                                <include reference="VTH-4s-b6Y"/>
+                                <include reference="YQS-FC-waa"/>
                                 <include reference="Fcz-fN-MWv"/>
                                 <include reference="Rxb-Z3-KqP"/>
                                 <include reference="hDB-DY-fzX"/>
-                                <include reference="VTH-4s-b6Y"/>
-                                <include reference="YQS-FC-waa"/>
                                 <include reference="31X-Hq-3J8"/>
                                 <include reference="4VR-Ot-iBu"/>
                                 <include reference="erS-6A-wOu"/>
                                 <include reference="2Dn-6G-Itm"/>
                                 <include reference="k7r-b7-RWM"/>
-                                <include reference="2bj-6S-a7a"/>
-                                <include reference="8cH-xA-I7w"/>
-                                <include reference="atq-UY-cM5"/>
-                                <include reference="xS7-ay-9eP"/>
-                                <include reference="ZGz-SX-aXC"/>
-                                <include reference="cpa-aZ-zsC"/>
-                                <include reference="Vle-eQ-S2C"/>
-                                <include reference="Zk2-GB-Sz9"/>
-                                <include reference="hr1-xC-bHl"/>
-                                <include reference="yAA-3A-LH5"/>
                             </mask>
                         </variation>
                     </view>
@@ -359,7 +361,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3067.5" y="103.5"/>
+            <point key="canvasLocation" x="-3862.5" y="135.75"/>
+        </scene>
+        <!--Alarm-->
+        <scene sceneID="8G1-nH-n0c">
+            <objects>
+                <viewController id="1q3-Zn-qza" customClass="AlarmViewController" customModule="BMICalcLectureNOTES" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wBM-AO-J8A"/>
+                        <viewControllerLayoutGuide type="bottom" id="eon-gd-jX0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oZ0-VZ-5b7">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Alarm" id="3Pc-l9-HzL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BwV-BI-Q3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4849.5" y="135.75"/>
         </scene>
         <!--Log-->
         <scene sceneID="eZH-aF-oEZ">
@@ -370,7 +390,7 @@
                         <viewControllerLayoutGuide type="bottom" id="H8V-0F-TZG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="e7h-pY-Rgx">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loR-4u-CsO">
@@ -546,7 +566,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBY-eG-s59" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2899.5" y="-1014"/>
+            <point key="canvasLocation" x="-2914.5" y="-118.5"/>
         </scene>
         <!--Chart-->
         <scene sceneID="6Ob-XQ-fBb">
@@ -557,7 +577,7 @@
                         <viewControllerLayoutGuide type="bottom" id="BDL-lC-oaW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6XN-cv-wDX">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MhG-Jc-Rhk" customClass="BarChartView" customModule="Charts">
@@ -642,7 +662,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YgN-NS-4TP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1951.5" y="-501"/>
+            <point key="canvasLocation" x="-2239.5" y="-835.5"/>
         </scene>
     </scenes>
     <resources>
@@ -650,7 +670,7 @@
         <image name="scale" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fMg-Pp-FNF"/>
         <segue reference="vRX-xC-ub9"/>
+        <segue reference="mKf-Vk-DBK"/>
     </inferredMetricsTieBreakers>
 </document>

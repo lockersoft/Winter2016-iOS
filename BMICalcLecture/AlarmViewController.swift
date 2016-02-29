@@ -11,44 +11,64 @@ import UIKit
 class AlarmViewController: UIViewController {
 
     @IBOutlet var alarmTime: UITextField!
-    @IBOutlet var notesText: UITextView!
+    @IBOutlet var alarmTime2: UITextField!
+    @IBOutlet var notesText: UITextField!
+    @IBOutlet var notesText2: UITextField!
     @IBOutlet var recurringSwitch: UISwitch!
+    
+    @IBOutlet var switchActive: UISwitch!
+    @IBOutlet var switchActive2: UISwitch!
+    @IBOutlet var recurringSwitch2: UISwitch!
+    
+    var alarms : Array<Alarm> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
      //   registerNotifications()
+        alarms.append( Alarm(alarmTime: alarmTime, notesText: notesText, recurring: recurringSwitch, active: switchActive))
+        alarms.append( Alarm(alarmTime: alarmTime2, notesText: notesText2, recurring: recurringSwitch2, active: switchActive2))
     }
 
     @IBAction func setAlarmTime1(sender: UITextField) {
         let datePickerView:UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.DateAndTime
-        
+        print("Tag: \(sender.tag)")
+        datePickerView.tag = sender.tag
         sender.inputView = datePickerView
         
         datePickerView.addTarget(self, action: Selector("datePickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
     }
     
-    func setDateTimeTextEdit( date : NSDate ){
+    func setDateTimeTextEdit( date : NSDate, tag : Int ){
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
         dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
-        alarmTime.text = dateFormatter.stringFromDate(date)
+        if( tag == 1){
+            alarmTime.text = dateFormatter.stringFromDate(date)
+        } else {
+            alarmTime2.text = dateFormatter.stringFromDate(date)
+        }
     }
     
     func datePickerValueChanged(sender:UIDatePicker) {
-        setDateTimeTextEdit( sender.date)
-        sendNotification(sender.date )
+        setDateTimeTextEdit( sender.date, tag: sender.tag )
+        sendNotification(sender.date, tag: sender.tag )
     }
     
-    func sendNotification( date : NSDate ){
+    func sendNotification( date : NSDate, tag : Int ){
         let notification = UILocalNotification()
+        
         notification.fireDate = date //timeIntervalSinceNow: 10 )
-        notification.alertBody = notesText.text //"Yo!  Take your medicine"
         notification.alertAction = "See the medicine reminder."
         notification.soundName = UILocalNotificationDefaultSoundName
-        notification.userInfo = [ "AlarmNumber": "1" ]
-        
+        notification.userInfo = [ "AlarmNumber": tag ]
+        if( tag == 1 ){
+            notification.alertBody = notesText.text
+        } else {
+            notification.alertBody = notesText2.text
+        }
+
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
     

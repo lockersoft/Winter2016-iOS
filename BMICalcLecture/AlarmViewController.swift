@@ -11,12 +11,12 @@ import UIKit
 class AlarmViewController: UIViewController {
 
     @IBOutlet var alarmTime: UITextField!
-    @IBOutlet var alarmTime2: UITextField!
     @IBOutlet var notesText: UITextField!
-    @IBOutlet var notesText2: UITextField!
     @IBOutlet var recurringSwitch: UISwitch!
-    
     @IBOutlet var switchActive: UISwitch!
+    
+    @IBOutlet var notesText2: UITextField!
+    @IBOutlet var alarmTime2: UITextField!
     @IBOutlet var switchActive2: UISwitch!
     @IBOutlet var recurringSwitch2: UISwitch!
     
@@ -40,20 +40,30 @@ class AlarmViewController: UIViewController {
         datePickerView.addTarget(self, action: Selector("datePickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
     }
     
+    @IBAction func activateAlarm(sender: UISwitch) {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+
+        if( sender.on ){
+            let alarmDate = dateFormatter.dateFromString(alarms[sender.tag].alarmTime.text! )
+          sendNotification(alarmDate!, tag: sender.tag )
+        }
+    }
+    
+    
     func setDateTimeTextEdit( date : NSDate, tag : Int ){
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
         dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
-        if( tag == 1){
-            alarmTime.text = dateFormatter.stringFromDate(date)
-        } else {
-            alarmTime2.text = dateFormatter.stringFromDate(date)
-        }
+        alarms[tag].alarmTime.text = dateFormatter.stringFromDate(date)
     }
     
     func datePickerValueChanged(sender:UIDatePicker) {
         setDateTimeTextEdit( sender.date, tag: sender.tag )
-        sendNotification(sender.date, tag: sender.tag )
+        if( alarms[sender.tag].active.on ){
+            sendNotification(sender.date, tag: sender.tag )
+        }
     }
     
     func sendNotification( date : NSDate, tag : Int ){
@@ -63,12 +73,8 @@ class AlarmViewController: UIViewController {
         notification.alertAction = "See the medicine reminder."
         notification.soundName = UILocalNotificationDefaultSoundName
         notification.userInfo = [ "AlarmNumber": tag ]
-        if( tag == 1 ){
-            notification.alertBody = notesText.text
-        } else {
-            notification.alertBody = notesText2.text
-        }
-
+        notification.alertBody = alarms[tag].notesText.text
+        
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
     

@@ -23,26 +23,27 @@ class ChartViewController: UIViewController {
         var yaxis : [Double] = []
         
         let logFile = FileUtils(fileName: "bmilog.csv")
-        let rawLogData = logFile.readFile()
-        let logEntries : Array = rawLogData.componentsSeparatedByString("\n")
+        if( logFile.fileExists()){
+            let rawLogData = logFile.readFile()
+            let logEntries : Array = rawLogData.componentsSeparatedByString("\n")
         // Convert the record into a date/time object
         // compare with the startdate and enddate time object
         //  if between - use that record's string
         //  otherwise skip
-        for record : String in logEntries {
-            //    record is a comma delimited string
-            if( record != "" ){
-                let entry : Array = record.componentsSeparatedByString(",")
-                xaxis.append( entry[2] )
-                var yvalue = 0.0
-                if let y = Double(entry[1]){
-                    yvalue = y
+            for record : String in logEntries {
+                //    record is a comma delimited string
+                if( record != "" ){
+                    let entry : Array = record.componentsSeparatedByString(",")
+                    xaxis.append( entry[2] )
+                    var yvalue = 0.0
+                    if let y = Double(entry[1]){
+                        yvalue = y
+                    }
+                    yaxis.append( yvalue )
                 }
-                yaxis.append( yvalue )
             }
+            setChart( xaxis, values: yaxis )
         }
-        setChart( xaxis, values: yaxis )
-
  /*     X-AXIS
         let months = [
             "Jan", "Feb", "Mar", "Apr",
